@@ -19,12 +19,57 @@ p {
     background-color: #ea4754;
     width: 60vw;
     height: 40vh;
+    display: inline-block;
 }
 #blue{
     background-color: #44b2e2;
     width: 40vw;
     height: 40vh;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline-block;
+        
 }
 .container{
     display: inline-block;
+}
+.bottom{
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #fff;
+}
+
+.outer{ 
+    float:left; 
+    width:60vw;; 
+    height:40vh; 
+    background-color:#ea4754; 
+}
+.inner{ 
+    float:left; 
+    width:60%; 
+    line-height:40vh; 
+    text-align:left;
+    padding-left: 50px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    color: #fff;
+}
+.outerblue{ 
+    float:left; 
+    width:40vw;; 
+    height:40vh; 
+    background-color:#44b2e2; 
+}
+.innerblue{ 
+    float:left; 
+    width:100%; 
+    line-height:40vh; 
+    text-align:center;
+    font-family: 'roboto', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    color: #fff;
 }
