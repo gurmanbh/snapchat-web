@@ -13,15 +13,28 @@ p {
 #image {
     width:85%;
 margin-top: 5%;
-margin-left: 5%;
-}
+margin-left: 5%;}
     
 #yellow{
     background-color: #efe200;
     width: 100%;
     height: 560px;
 }
+#pink{
+    background-color: #ea4754;
+    width: 100%;
+    height: 200px;
+    display: inline-block;
+}
+#blue{
+    background-color: #44b2e2;
+    width: 40vw;
+    height: 40vh;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline-block;
         
+}
 .container{
     display: inline-block;
 }
@@ -40,7 +53,7 @@ margin-left: 5%;
 }
 .inner{ 
     float:left; 
-    width:70%; 
+    width:50%; 
     text-align:left;
     padding-left: 50px;
     padding-top: 20px;
@@ -54,7 +67,7 @@ margin-left: 5%;
 }
 .outerblue{ 
     float:left; 
-    width:40%; 
+    width:40%;; 
     height:200px; 
     background-color:#44b2e2; 
 }
@@ -68,31 +81,11 @@ margin-left: 5%;
     font-size: 60px;
     color: #fff;
 }
-.arrow{
-    margin-top:-110px;
-    margin-left:43%;
+#arrow{
+    margin-top:-200px;
+    margin-right:100px;
 }
-@media (max-width: 850px){
-    .outer{
-     width: 50%;
-    }
-    .outerblue {
-        width: 50%;
-    }
-    #yellow{
-    height: 450px;
-    }
-    #image {
-    margin-top:15%;
-}
-    .inner {
-        font-size: 45px;
-        width:100%;
-        padding-left: 5%;
-    padding-top: 10%;
-        height: 250px;
-        font-weight: 100;
-    }}
+
 @media (max-width: 650px){
     .outer{
      width: 100%;
@@ -112,4 +105,5 @@ margin-left: 5%;
     height: 300px;
     }#image {
     margin-top:10%;
-}}
+}
+}
