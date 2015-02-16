@@ -33,14 +33,14 @@ margin-left: 5%;
 }
 
 .outer{ 
-    float:left; 
     width:60%;
     height:200px; 
     background-color:#ea4754; 
+    display: inline-block;
+    vertical-align: top;
 }
-.inner{ 
-    float:left; 
-    width:70%; 
+.inner{  
+    width:40%; 
     text-align:left;
     padding-left: 50px;
     padding-top: 20px;
@@ -48,18 +48,19 @@ margin-left: 5%;
     font-weight: 100;
     font-size: 60px;
     color: #fff;
+    position: absolute;
 }
 #check {
     display: inline-block;
 }
 .outerblue{ 
-    float:left; 
+    margin-left: -5px;
     width:40%; 
     height:200px; 
     background-color:#44b2e2; 
+    display: inline-block;
 }
 .innerblue{ 
-    float:left; 
     width:100%; 
     line-height:200px; 
     text-align:center;
@@ -67,10 +68,73 @@ margin-left: 5%;
     font-weight: 800;
     font-size: 60px;
     color: #fff;
+    display: inline-block;
 }
-.arrow{
+
+#arrow{
     margin-top:-110px;
     margin-left:43%;
+}
+
+.nav {
+	padding:10px;
+	border-top:1px solid #ddd;
+	cursor:pointer;
+}
+#purplehead{
+    background-color: #9B55A0;
+    width= 70%;
+    height: 200px;
+    
+}
+#purplehead h1{
+    font-family:  "roboto", Arial, sans-serif;
+    font-weight:200;
+    text-align: left;
+    margin-left: 10%;
+    color: #fff;
+    font-size: 30px;
+}
+#purplehead h2{
+    font-family:  "roboto", Arial, sans-serif;
+    font-weight:200;
+    text-align: left;
+    margin-left: 10%;
+    color: #fff;
+    font-size: 22px;
+}
+
+#rail {
+	min-height:30px;
+	width:25%;
+	margin-right:2%;
+	float:left;
+	font-family:  "roboto", Arial, sans-serif;
+    border-right: 1px solid #ddd;
+}
+#rail h5 {
+	font-size:20px;
+	font-weight:300;
+}
+#rail p {
+	margin-top:4px;
+	font-size:12px;
+	line-height:125%;
+}
+.nav:first-child {
+	border-top:none !important;
+}
+#rail img {
+    padding-right: 20px;
+    display: inline-block;
+    padding-top: 9%;
+}
+#content {
+    width: 100%;
+    
+}
+#wrapper {
+    vertical-align: top;
 }
 @media (max-width: 850px){
     .outer{
@@ -87,9 +151,9 @@ margin-left: 5%;
 }
     .inner {
         font-size: 45px;
-        width:100%;
+        width:60%;
         padding-left: 5%;
-    padding-top: 10%;
+    padding-top: 5%;
         height: 250px;
         font-weight: 100;
     }}
@@ -99,6 +163,7 @@ margin-left: 5%;
     }
     .outerblue {
         width: 100%;
+        margin-left: 0px;
     }
     .inner {
         font-size: 60px;
