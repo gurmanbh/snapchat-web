@@ -85,8 +85,7 @@ margin-left: 5%;
 #purplehead{
     background-color: #9B55A0;
     width= 70%;
-    height: 200px;
-    
+    height: 160px;
 }
 #purplehead h1{
     font-family:  "roboto", Arial, sans-serif;
@@ -95,7 +94,7 @@ margin-left: 5%;
     margin-left: 5%;
     color: #fff;
     font-size: 40px;
-    line-height:130px;
+    line-height:110px;
 }
 #purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
@@ -111,9 +110,9 @@ margin-left: 5%;
 	min-height:30px;
 	width:25%;
 	margin-right:2%;
-	float:left;
 	font-family:  "roboto", Arial, sans-serif;
     border-right: 1px solid #ddd;
+    float: left;
 }
 #rail h5 {
 	font-size:20px;
@@ -134,10 +133,8 @@ margin-left: 5%;
 }
 #content {
     width: 74%;
-    align-content: flex-end;
     margin-left: auto;
     margin-right: 0px;
-    
 }
 #wrapper {
     vertical-align: top;
