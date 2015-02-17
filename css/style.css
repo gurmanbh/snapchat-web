@@ -62,17 +62,18 @@ margin-left: 5%;
 }
 .innerblue{ 
     width:100%; 
-    line-height:200px; 
+    line-height:130px; 
     text-align:center;
     font-family: 'roboto', sans-serif;
     font-weight: 800;
     font-size: 60px;
     color: #fff;
     display: inline-block;
+    
 }
 
 #arrow{
-    margin-top:-110px;
+    margin-top: -10px;
     margin-left:43%;
 }
 
@@ -91,17 +92,19 @@ margin-left: 5%;
     font-family:  "roboto", Arial, sans-serif;
     font-weight:200;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 20%;
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
+    line-height:130px;
 }
 #purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
     font-weight:200;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 20%;
     color: #fff;
-    font-size: 22px;
+    font-size: 25px;
+    margin-top: -50px;
 }
 
 #rail {
@@ -136,6 +139,20 @@ margin-left: 5%;
 #wrapper {
     vertical-align: top;
 }
+#content img{
+    width: 20%;
+    padding-left: 25%;
+    padding-top: 32px;
+    height: auto;
+}
+
+#content p{
+    width 70%;
+    padding-left: 5%;
+    padding-top: 32px;
+    font-family:  "roboto", Arial, sans-serif;
+}
+
 @media (max-width: 850px){
     .outer{
      width: 50%;
