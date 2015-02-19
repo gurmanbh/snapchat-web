@@ -82,12 +82,12 @@ margin-left: 5%;
 	border-top:1px solid #ddd;
 	cursor:pointer;
 }
-#purplehead{
+.purplehead{
     background-color: #9B55A0;
     width= 70%;
     height: 160px;
 }
-#purplehead h1{
+.purplehead h1{
     font-family:  "roboto", Arial, sans-serif;
     font-weight:200;
     text-align: left;
@@ -96,7 +96,7 @@ margin-left: 5%;
     font-size: 40px;
     line-height:110px;
 }
-#purplehead h2{
+.purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
     font-weight:200;
     text-align: left;
@@ -114,6 +114,13 @@ margin-left: 5%;
     border-right: 1px solid #ddd;
     float: left;
 }
+.sticky {  
+    position: fixed;  
+    width: 100%;    
+    top: 0;  
+    z-index: 100;  
+    border-top: 0;  
+}  
 #rail h5 {
 	font-size:20px;
 	font-weight:300;
