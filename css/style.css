@@ -124,7 +124,10 @@ margin-left: 5%;
     width: 100%;    
     top: 0;
     left: 0;
-    border-top: 0;  
+    border-top: 0; 
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }  
 #rail h5 {
 	font-size:20px;

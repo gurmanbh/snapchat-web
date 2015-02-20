@@ -1,4 +1,3 @@
-/* fix the navigation bar */
 $(document).ready(function() {  
 var stickyNavTop = $('#rail').offset().top;  
 var stickyNav = function(){  
