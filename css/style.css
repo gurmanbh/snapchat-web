@@ -163,6 +163,11 @@ margin-left: 5%;
     height: auto;
 }
 
+.move {
+    margin-left: 1.5%;
+}
+
+
 #content p{
     margin-left: 7%;
     font-family: "roboto", Arial, sans-serif;
@@ -212,7 +217,7 @@ margin-left: 5%;
         text-align:center;
         width:100%;
         padding-left: 0px;
-    padding-top: 10%;   
+        padding-top: 10%;   
     }
     
     #yellow{
