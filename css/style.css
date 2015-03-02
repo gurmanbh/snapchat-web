@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+} 
+
  body { margin:0; }  
 h1 {
     font-family: 'roboto', sans-serif; 
@@ -155,18 +161,25 @@ margin-left: 5%;
 #wrapper {
     vertical-align: top;
     margin-top: -27px;
+    min-width: 985px;
 }
-#content img{
+.ph{
     width: 30%;
-    padding-left: 30%;
-    margin-top: 50px;
     height: auto;
+    margin-top: 50px;
+    margin-left: 28%;
 }
 
 .move {
     margin-left: 1.5%;
 }
 
+.snap{
+    position: absolute;
+    left: 27%;
+    padding-top: 10%;
+    width: 320px;
+}
 
 #content p{
     margin-left: 7%;
