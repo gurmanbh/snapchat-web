@@ -164,21 +164,35 @@ margin-left: 5%;
     min-width: 985px;
 }
 .ph{
-    width: 30%;
+    width: 40%;
     height: auto;
-    margin-top: 50px;
-    margin-left: 28%;
+    position: absolute;
 }
 
-.move {
-    margin-left: 1.5%;
+
+.inter {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 35%;
+    display: block;
+    height: 700px;
+}
+
+.timer-no{
+    font-family: 'roboto';
+    font-size: 23px;
+    margin-left: 33.3%;
+    margin-top: 16%;
+    position: absolute;
+    color: white;
 }
 
 .snap{
     position: absolute;
-    left: 27%;
-    padding-top: 10%;
-    width: 320px;
+    margin-top: 12.5%;
+    width: 35.8%;
+    height: auto;
+    margin-left: 2.5%
 }
 
 #content p{

@@ -19,9 +19,26 @@ $(window).scroll(function() {
 
 
 $('.nav').on('click', function(){
-	var space = $(this).attr('refer');
+	var space = $(this).attr('data-refer');
     var l= '#s-'+space;
     var pos = $(l).offset();
-    console.log(pos);
     $('html, body').animate({scrollTop:(pos.top)}, 600);
 });
+
+function getImagePath() {
+
+}
+    var seconds = 10;
+    function secondPassed(id) {
+        document.getElementById([id]).getElementsByClassName("timer-no")[0].innerHTML = seconds;
+        if (seconds == 0) {
+            clearInterval(countdownTimer);
+
+        } else {
+            seconds--;
+            console.log(seconds)
+        }
+    }
+    x = 1;
+    var countdownTimer = setInterval('secondPassed("snap"+[x])', 1000);
+
