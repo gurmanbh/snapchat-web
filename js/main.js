@@ -29,16 +29,27 @@ function getImagePath() {
 
 }
     var seconds = 10;
-    function secondPassed(id) {
-        document.getElementById([id]).getElementsByClassName("timer-no")[0].innerHTML = seconds;
-        if (seconds == 0) {
-            clearInterval(countdownTimer);
+    var snaps = 1;
+    var lastsnap = 4;
+    var s=1
 
-        } else {
-            seconds--;
-            console.log(seconds)
+{
+        function secondPassed(id) {
+            document.getElementById([id]).getElementsByClassName("timer-no")[0].innerHTML = seconds;
+            if (seconds == 0) {
+                if (snaps < lastsnap){
+                    seconds = 10;
+                    snaps ++;
+                    $('#snap1 .snap').attr('src', 'img/snaps1/'+snaps+'.png');
+                    document.getElementById([id]).getElementsByClassName("timer-no")[0].innerHTML = seconds;
+                } else {
+                    clearInterval(countdownTimer);
+                }
+
+            } else {
+                seconds--;
+                console.log(seconds)
+            }
         }
-    }
-    x = 1;
-    var countdownTimer = setInterval('secondPassed("snap"+[x])', 1000);
-
+        var countdownTimer = setInterval('secondPassed("snap"+[s])', 1000);
+    } //loop ends here   
