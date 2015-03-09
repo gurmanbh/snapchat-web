@@ -4,7 +4,8 @@
           box-sizing: border-box;
 } 
 
- body { margin:0; }  
+ body { margin:0; } 
+
 h1 {
     font-family: 'roboto', sans-serif; 
     font-weight: 500;
@@ -17,10 +18,29 @@ p {
     font-size: 20px;
     color: #000;
 }
+
+#ytitle{
+    width:60%; 
+    line-height:130px; 
+    text-align:left;
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    font-size: 110px;
+    padding-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 80px;
+    color: #000;
+    display: inline-block;
+
+}
+
+#yimg{
+    display: inline-block;
+    width:35%;
+
+}
 #image {
-    width:85%;
-margin-top: 5%;
-margin-left: 5%;
+    margin-left: 10%;    
 }
     
 #yellow{
@@ -53,9 +73,10 @@ margin-left: 5%;
     padding-top: 20px;
     font-family: 'roboto', sans-serif;
     font-weight: 100;
-    font-size: 9vh;
+    font-size: 45px;
     color: #fff;
     position: absolute;
+    font-style:italic;
 }
 #check {
     display: inline-block;
@@ -93,17 +114,23 @@ margin-left: 5%;
 }
 .purplehead{
     background-color: #9B55A0;
-    width= 70%;
-    height: 160px;
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 0.7;
+    margin-left: 5%;
 }
 .purplehead h1{
     font-family:  "roboto", Arial, sans-serif;
     font-weight:200;
     text-align: left;
     margin-left: 5%;
+    padding-top: -20px;
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     line-height:110px;
+    text-align: center;
 }
 .purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
@@ -162,6 +189,7 @@ margin-left: 5%;
     vertical-align: top;
     margin-top: -27px;
     min-width: 985px;
+    margin-bottom: 20px;
 }
 .ph{
     width: 40%;
@@ -205,6 +233,7 @@ margin-left: 5%;
     text-align: justify;
     margin-bottom: 50px;
 }
+
 
 @media (max-width: 850px){
     .outer{

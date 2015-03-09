@@ -28,17 +28,17 @@ $('.nav').on('click', function(){
 function getImagePath() {
 
 }
-    var seconds = 10;
+    var startsec = 5;
+    var seconds = startsec;
     var snaps = 1;
     var lastsnap = 4;
     var s=1
 
-{
         function secondPassed(id) {
             document.getElementById([id]).getElementsByClassName("timer-no")[0].innerHTML = seconds;
             if (seconds == 0) {
                 if (snaps < lastsnap){
-                    seconds = 10;
+                    seconds = startsec;
                     snaps ++;
                     $('#snap1 .snap').attr('src', 'img/snaps1/'+snaps+'.png');
                     document.getElementById([id]).getElementsByClassName("timer-no")[0].innerHTML = seconds;
@@ -52,4 +52,3 @@ function getImagePath() {
             }
         }
         var countdownTimer = setInterval('secondPassed("snap"+[s])', 1000);
-    } //loop ends here   
