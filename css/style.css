@@ -11,6 +11,7 @@ h1 {
     font-weight: 500;
     font-size: 25px;
     color: #000;
+    margin-top: -10px;
 }
 p {
     font-family: 'roboto', sans-serif; 
@@ -19,28 +20,59 @@ p {
     color: #000;
 }
 
+.replay{
+    position: absolute;
+    margin-top: 27%;
+    margin-left: 9%;
+    width: 170px;
+    display: none;
+    transition: all 0.3s;
+}
+
+.show {
+    display: block;
+
+}
+
+ .show:hover {
+    display: block;
+    cursor:pointer;
+}
+
+.fade{
+    opacity: 0.4;
+}
+
 #ytitle{
     width:60%; 
     line-height:130px; 
     text-align:left;
     font-family: 'roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 110px;
-    padding-top: 1vh;
     margin-bottom: 1vh;
-    padding-left: 80px;
     color: #000;
     display: inline-block;
+    margin-left: 6%;
+  margin-top: 10%;
+  position: absolute;
+  /* margin-right: 20px; */
 
 }
 
 #yimg{
     display: inline-block;
     width:35%;
+    vertical-align: center;
+    margin-left: 55.82%;
+  margin-top: 10%;
+  position: absolute;
+  /* margin-right: 20px; */
+
 
 }
 #image {
-    margin-left: 10%;    
+    margin-left: 40%;    
 }
     
 #yellow{
@@ -70,10 +102,10 @@ p {
     width:40%; 
     text-align:left;
     padding-left: 50px;
-    padding-top: 20px;
+    padding-top: 38px;
     font-family: 'roboto', sans-serif;
     font-weight: 100;
-    font-size: 45px;
+    font-size: 40px;
     color: #fff;
     position: absolute;
     font-style:italic;
@@ -88,6 +120,7 @@ p {
     background-color:#44b2e2; 
     display: inline-block;
 }
+
 .innerblue{ 
     width:100%; 
     line-height:130px; 
@@ -105,6 +138,7 @@ p {
 #arrow{
     margin-top: -10px;
     margin-left:43%;
+    cursor: pointer;
 }
 
 .nav {
@@ -124,13 +158,11 @@ p {
 .purplehead h1{
     font-family:  "roboto", Arial, sans-serif;
     font-weight:200;
-    text-align: left;
-    margin-left: 5%;
-    padding-top: -20px;
-    color: #fff;
-    font-size: 30px;
-    line-height:110px;
     text-align: center;
+  padding-top: -20px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 80px;
 }
 .purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
@@ -162,6 +194,16 @@ p {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }  
+
+.sticky1 {  
+    position: fixed;    
+    top: 0;
+    z-index: 5;
+    width: 68%;
+    margin-left: 4%;
+    margin-top: 5px;
+}  
+
 #rail h5 {
 	font-size:20px;
 	font-weight:300;
@@ -187,7 +229,6 @@ p {
 }
 #wrapper {
     vertical-align: top;
-    margin-top: -27px;
     min-width: 985px;
     margin-bottom: 20px;
 }
@@ -229,7 +270,6 @@ p {
     line-height: 180%;
     margin-right: 7%;
     font-size: 20px;
-    margin-top: 50px;
     text-align: justify;
     margin-bottom: 50px;
 }
