@@ -3,6 +3,11 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 } 
+
+.active-button{
+    background-position: 0px 60px !important;
+}
+
 .play{
     background: url(/img/buttons/play.png);
     background-position: 0px 0px;
@@ -12,7 +17,7 @@
 
 .play:hover{
     background: url(/img/buttons/play.png);
-    background-position: 0px 60px;
+    background-position: 0px -60px;
     width: 60px;
     height: 60px;
 }
@@ -20,14 +25,14 @@
 .pause  {
     background: url(/img/buttons/pause.png);
     background-position: 0px 0px;
-    width: 50px;
+    width: 60px;
     height: 60px;
 }
 
 .pause:hover{
     background: url(/img/buttons/pause.png);
-    background-position: 0px 60px;
-    width: 50px;
+    background-position: 0px -60px;
+    width: 60px;
     height: 60px;
 }
 
@@ -40,7 +45,7 @@
 
 .reset:hover{
     background: url(/img/buttons/reset.png);
-    background-position: 0px 60px;
+    background-position: 0px -60px;
     width: 60px;
     height: 60px;
 }
@@ -88,7 +93,6 @@ p {
 #ytitle{
     width:60%; 
     line-height:1.2em; 
-    text-align:left;
     font-family: 'roboto', sans-serif;
     font-weight: 400;
     font-size: 8em;
@@ -182,6 +186,7 @@ p {
     margin-left:43%;
     cursor: pointer;
     width: 6em;
+    margin-top: 5%;
 }
 
 .nav {
@@ -332,41 +337,18 @@ line-height: 3em;
 }
 
 
-@media (max-width: 850px){
-    .outer{
-     width: 50%;
-        height: 30vh;
-    }
-    .outerblue {
-        width: 50%;
-        height: 30vh;
-    }
-    #yellow{
-    height: 70vh;
-    }
-    #image {
-    margin-top:13%;
-}
-    .inner {
-        font-size: 7vh;
-        width:60%;
-        padding-left: 5%;
-    padding-top: 5%;
-        font-weight: 100;
-    }}
-
-@media (max-width: 650px){
+@media (max-width: 800px){
     .outer{
      width: 100%;
-    height: 33vh;
+    height: 35vh;
     }
     .outerblue {
         width: 100%;
         margin-left: 0px;
-        height: 33vh;
+        height: 28vh;
     }
     .inner {
-        font-size: 60px;
+        font-size: 3em;
         text-align:center;
         width:100%;
         padding-left: 0px;
@@ -374,7 +356,24 @@ line-height: 3em;
     }
     
     #yellow{
-    height: 34vh;
-    }#image {
-    margin-top:15%;
-}}
+    height: 38vh;
+    }
+
+    #image {
+    display: none;
+    position: absolute;
+    }
+
+     #arrow {
+    margin-top: 5%;
+    }
+
+    #ytitle {
+    width:100%;
+    text-align: center;
+    line-height:1.2em; 
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-size: 5.5em;
+    margin-left: 0;
+}

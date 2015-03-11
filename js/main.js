@@ -61,23 +61,29 @@ $('.button').on('click',function(){
     var type = $(this).attr('data-button');
 
     if (type=='play') {
+        $('.s-'+phone).removeClass('active-button');
+        $(this).addClass('active-button');
         if (timers[phone].play== 'inactive'){
             timers[phone].status='p';
             machine(phone);
-            timers[phone].play= 'active'
+            timers[phone].play= 'active';
         } 
         else {
         timers[phone].status='p';
         }} 
     else if (type=='pause'){
+         $('.s-'+phone).removeClass('active-button');
+        $(this).addClass('active-button');
         timers[phone].status='h';
     } else if (type=='reset'){
+        $('.s-'+phone).removeClass('active-button');
+        $('.s-'+phone+'.play').addClass('active-button');
         timers[phone].current=1;
         $('#'+phone+' .stuff').removeClass('fade');
         clearInterval(timers[phone].timer);
         timers[phone].status='p';
         machine(phone);
-        $('#'+[phone]+' .snap').attr('src', 'img/'+phone+'/'+1+'.png');
+        $('#'+phone+' .snap').attr('src', 'img/'+phone+'/'+1+'.png');
         
     }
 
