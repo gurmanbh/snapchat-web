@@ -3,6 +3,48 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 } 
+.play{
+    background: url(/img/buttons/play.png);
+    background-position: 0px 0px;
+    width: 60px;
+    height: 60px;
+}
+
+.play:hover{
+    background: url(/img/buttons/play.png);
+    background-position: 0px 60px;
+    width: 60px;
+    height: 60px;
+}
+
+.pause  {
+    background: url(/img/buttons/pause.png);
+    background-position: 0px 0px;
+    width: 50px;
+    height: 60px;
+}
+
+.pause:hover{
+    background: url(/img/buttons/pause.png);
+    background-position: 0px 60px;
+    width: 50px;
+    height: 60px;
+}
+
+.reset{
+    background: url(/img/buttons/reset.png);
+    background-position: 0px 0px;
+    width: 60px;
+    height: 60px;
+}
+
+.reset:hover{
+    background: url(/img/buttons/reset.png);
+    background-position: 0px 60px;
+    width: 60px;
+    height: 60px;
+}
+
 
  body { margin:0; } 
 
@@ -195,9 +237,7 @@ line-height: 3em;
 }
 
 .button {
-    height: 50px;
-    width: auto;
-    margin: 15px;
+    margin: 20px;
     cursor: pointer;
 }
 
