@@ -45,11 +45,11 @@ p {
 
 #ytitle{
     width:60%; 
-    line-height:130px; 
+    line-height:1.2em; 
     text-align:left;
     font-family: 'roboto', sans-serif;
     font-weight: 400;
-    font-size: 110px;
+    font-size: 8em;
     margin-bottom: 1vh;
     color: #000;
     display: inline-block;
@@ -99,16 +99,17 @@ p {
     vertical-align: top;
 }
 .inner{  
-    width:40%; 
+    width:50%; 
     text-align:left;
     padding-left: 50px;
     padding-top: 38px;
     font-family: 'roboto', sans-serif;
     font-weight: 100;
-    font-size: 40px;
+    font-size: 3.5em;
     color: #fff;
     position: absolute;
     font-style:italic;
+    line-height: 1.4em;
 }
 #check {
     display: inline-block;
@@ -123,12 +124,12 @@ p {
 
 .innerblue{ 
     width:100%; 
-    line-height:130px; 
+    line-height:1.4em; 
     text-align:center;
     font-family: 'roboto', sans-serif;
     font-weight: 800;
-    font-size: 8vh;
-    padding-top: 1vh;
+    font-size: 6em;
+    padding-top: 38px;
     margin-bottom: 1vh;
     color: #fff;
     display: inline-block;
@@ -136,9 +137,9 @@ p {
 }
 
 #arrow{
-    margin-top: -10px;
     margin-left:43%;
     cursor: pointer;
+    width: 7em;
 }
 
 .nav {
