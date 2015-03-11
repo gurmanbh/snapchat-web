@@ -1,6 +1,6 @@
 var timers = {
     snap1: {
-        current: 0,
+        current: 1,
         timer: null,
         max:4,
         status: 'h',
@@ -8,28 +8,28 @@ var timers = {
     },
 
     snap2: {
-       current: 0,
+       current: 1,
         timer: null,
         max:4,
         status: 'h',
         time:5,
     },
     snap3: {
-        current: 0,
+        current: 1,
         timer: null,
         max:4,
         status: 'h',
         time:5,
     },
     snap4: {
-        current: 0,
+        current: 1,
         timer: null,
         max:4,
         status: 'h',
         time:5,
     },
     snap5: {
-        current: 0,
+        current: 1,
         timer: null,
         max:4,
         status: 'h',

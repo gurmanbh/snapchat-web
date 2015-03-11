@@ -185,6 +185,20 @@ line-height: 2.5em;
     left: 0;
     vertical-align: top;
 }
+
+.button-box{
+    position: absolute;
+    width: 70px;
+    height: auto;
+    margin-left: 47%;
+    margin-top: 60%;
+}
+
+.button {
+    height: 50px;
+    width: auto;
+    margin: 15px;
+}
 .sticky {  
     position: fixed;  
     width: 100%;    
