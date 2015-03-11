@@ -31,23 +31,26 @@ var timers = {
         max:5,
         status: 'h',
     }
-}
+};
 
 //machine starts here 
 function machine(phn){
     var startsec = timers[phn].time;
     var seconds = startsec;
     var snaps = timers[phn].current;
-    var lastsnap = timers[phn].current;
+    var lastsnap = timers[phn].max;
 
-    function secondPassed(id) {
-        $('#'+[id]+" .timer-no").html(seconds);
+    console.log(startsec + " " + seconds + " " + snaps + " " + lastsnap);
+
+    function secondPassed() {
+        $('#'+[phn]+" .timer-no").html(seconds);
+        console.log(seconds);
         if (seconds == 0) {
             if (snaps < lastsnap){
                 seconds = startsec;
                 snaps ++;
                 $('#snap1 .snap').attr('src', 'img/snaps1/'+snaps+'.png');
-                $('#'+[id]+" .timer-no").html(seconds);
+                $('#'+[phn]+" .timer-no").html(seconds);
                 } else {
                     clearInterval(countdownTimer);
                     $('#snap1 .replay').addClass('show');
@@ -59,13 +62,13 @@ function machine(phn){
                 console.log(seconds)
             }
         }
-    if (timers[phn].status == 'p')
-    var countdownTimer = setInterval(secondPassed([phn]), 1000);
+
+    var countdownTimer = setInterval('secondPassed([phn])', 1000);
 }
 
 // check page location
-
-$(window).scroll(function() { 
+machine ('snap1');
+/* $(window).scroll(function() { 
     var buffer = 200;
 
     var loc1 = $('#snap1').offset().top - buffer;
@@ -92,7 +95,7 @@ $(window).scroll(function() {
     }
 
 });
-
+*/
 //waypoints
 // html
         //<div id="zero" class="iphone" data-which-phone="zero"></div>
