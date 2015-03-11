@@ -5,6 +5,7 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
+        index: 1
     },
 
     snap2: {
@@ -13,6 +14,7 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
+        index: 2
     },
     snap3: {
         current: 1,
@@ -20,6 +22,7 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
+        index: 3
     },
     snap4: {
         current: 1,
@@ -27,6 +30,7 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
+        index: 4
     },
     snap5: {
         current: 1,
@@ -34,11 +38,36 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
+        index: 5
     }
 };
 
-function pause (phn){
+$('.button').on('click',function(){
+    var phone = $(this).attr('data-build');
+    var type = $(this).attr('data-button');
 
+    if (type=='play') {
+        if (timers[phone].status=='h'){
+            timers[phone].status='p';
+            machine(phone);
+        } 
+        else {
+        timers[phone].status='p';
+        }} 
+    else if (type=='pause'){
+        timers[phone].status='h';
+    } else if (type=='reset'){
+
+        clearInterval(timers[phone].timer);
+        timers[phone].current=1;
+        timers[phone].status='p';
+        $('#'+[phone]+' .snap').attr('src', 'img/'+phone+'/'+1+'.png');
+        machine(phone);
+    }
+
+});
+
+function pause (phn){
 
     }
 
@@ -50,30 +79,26 @@ function machine(phn){
     var lastsnap = timers[phn].max;
 
     console.log(startsec + " " + seconds + " " + snaps + " " + lastsnap);
-    var countdownTimer = setInterval(secondPassed, 1000);
-    timers[phn].timer = countdownTimer;
+    timers[phn].timer = setInterval(secondPassed, 1000);
     function secondPassed() {
         
         if (seconds < 0) {
             if (snaps < lastsnap){
                 seconds = startsec;
                 snaps ++;
-                $('#snap1 .snap').attr('src', 'img/'+phn+'/'+snaps+'.png');
+                $('#'+[phn]+' .snap').attr('src', 'img/'+phn+'/'+snaps+'.png');
                 $('#'+[phn]+" .timer-no").html(seconds);
                 } else {
-                    clearInterval(countdownTimer);
-                    $('#'+phn+' .replay').addClass('show');
+                    clearInterval(timers[phn].timer);
                     $('#'+phn+' .stuff').addClass('fade');
                 }
 
-            } else if (timers[phn].status == 'p' && $()) {
+            } else if (timers[phn].status == 'p') {
                 
                 $('#'+[phn]+" .timer-no").html(seconds);
                 seconds--;
             }
         }
-
-    
 }
 
 // check page location
@@ -126,7 +151,7 @@ var datedata = jQuery.grep(bigdata, function(obj) {
                 });
 
                 */
-
+/*
 var pw1 = new Waypoint({
   element: document.getElementById("snap1"),
   handler: function(direction) {
@@ -208,7 +233,7 @@ var pw5 = new Waypoint({
   offset: 'bottom-in-view'
 })
 
-
+*/
 
 
 //make scroll sticky

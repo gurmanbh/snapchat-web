@@ -198,7 +198,9 @@ line-height: 2.5em;
     height: 50px;
     width: auto;
     margin: 15px;
+    cursor: pointer;
 }
+
 .sticky {  
     position: fixed;  
     width: 100%;    
