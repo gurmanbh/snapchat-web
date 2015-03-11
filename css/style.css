@@ -64,7 +64,7 @@ p {
     display: inline-block;
     width:35%;
     vertical-align: center;
-    margin-left: 55.82%;
+    margin-left: 59.1%;
   margin-top: 10%;
   position: absolute;
   /* margin-right: 20px; */
@@ -250,7 +250,7 @@ line-height: 2.5em;
 
 .timer-no{
     font-family: 'roboto';
-    font-size: 20px;
+    font-size: 150%;
     margin-left: 33.3%;
     margin-top: 16%;
     position: absolute;

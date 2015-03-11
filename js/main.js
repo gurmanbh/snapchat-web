@@ -2,36 +2,45 @@ var timers = {
     snap1: {
         current: 0,
         timer: null,
-        max:5,
+        max:4,
         status: 'h',
         time:5,
     },
 
     snap2: {
-        current: 0,
-        timer: 5,
-        max:5,
-        status: 'h'
+       current: 0,
+        timer: null,
+        max:4,
+        status: 'h',
+        time:5,
     },
     snap3: {
         current: 0,
-        timer: 5,
-        max:5,
-        status: 'h'
+        timer: null,
+        max:4,
+        status: 'h',
+        time:5,
     },
     snap4: {
         current: 0,
-        timer: 5,
-        max:5,
+        timer: null,
+        max:4,
         status: 'h',
+        time:5,
     },
     snap5: {
         current: 0,
-        timer: 5,
-        max:5,
+        timer: null,
+        max:4,
         status: 'h',
+        time:5,
     }
 };
+
+function pause (phn){
+
+
+    }
 
 //machine starts here 
 function machine(phn){
@@ -41,33 +50,34 @@ function machine(phn){
     var lastsnap = timers[phn].max;
 
     console.log(startsec + " " + seconds + " " + snaps + " " + lastsnap);
-
+    var countdownTimer = setInterval(secondPassed, 1000);
+    timers[phn].timer = countdownTimer;
     function secondPassed() {
-        $('#'+[phn]+" .timer-no").html(seconds);
-        console.log(seconds);
-        if (seconds == 0) {
+        
+        if (seconds < 0) {
             if (snaps < lastsnap){
                 seconds = startsec;
                 snaps ++;
-                $('#snap1 .snap').attr('src', 'img/snaps1/'+snaps+'.png');
+                $('#snap1 .snap').attr('src', 'img/'+phn+'/'+snaps+'.png');
                 $('#'+[phn]+" .timer-no").html(seconds);
                 } else {
                     clearInterval(countdownTimer);
-                    $('#snap1 .replay').addClass('show');
-                    $('#snap1 .stuff').addClass('fade');
+                    $('#'+phn+' .replay').addClass('show');
+                    $('#'+phn+' .stuff').addClass('fade');
                 }
 
-            } else {
+            } else if (timers[phn].status == 'p' && $()) {
+                
+                $('#'+[phn]+" .timer-no").html(seconds);
                 seconds--;
-                console.log(seconds)
             }
         }
 
-    var countdownTimer = setInterval('secondPassed([phn])', 1000);
+    
 }
 
 // check page location
-machine ('snap1');
+
 /* $(window).scroll(function() { 
     var buffer = 200;
 
@@ -117,19 +127,18 @@ var datedata = jQuery.grep(bigdata, function(obj) {
 
                 */
 
-
-
-
-/*
 var pw1 = new Waypoint({
   element: document.getElementById("snap1"),
   handler: function(direction) {
     console.log('s-intro ' + direction);
     if (direction == 'up'){
         timers.snap1.status = 'p';
+        machine ('snap1');
+
     }
     if (direction == 'down'){
         timers.snap1.status = 'p';
+        machine ('snap1');
     }
   },
   offset: 'bottom-in-view'
@@ -140,10 +149,13 @@ var pw2 = new Waypoint({
   handler: function(direction) {
     console.log('s-user-growth ' + direction);
     if (direction == 'up'){
-        timers.snap2.status = 'p';
+        
+        machine ('snap2');
     }
     if (direction == 'down'){
-        timers.snap2.status = 'h';
+        timers.snap2.status = 'p';
+        timers.snap1.status = 'h';
+        machine ('snap2');
     }
   },
   offset: 'bottom-in-view'
@@ -157,7 +169,9 @@ var pw3 = new Waypoint({
         timers.snap3.status = 'p';
     }
     if (direction == 'down'){
-        timers.snap3.status = 'h';
+        timers.snap2.status = 'h'
+        timers.snap1.status = 'p';
+        machine ('snap3');
     }
   },
   offset: 'bottom-in-view'
@@ -171,7 +185,9 @@ var pw4 = new Waypoint({
         timers.snap4.status = 'p';
     }
     if (direction == 'down'){
-        timers.snap4.status = 'h';
+        timers.snap2.status = 'h'
+        timers.snap1.status = 'p';
+        machine ('snap4');
     }
   },
   offset: 'bottom-in-view'
@@ -184,12 +200,14 @@ var pw5 = new Waypoint({
         timers.snap5.status = 'p';
     }
     if (direction == 'down'){
-        timers.snap5.status = 'h';
+        timers.snap2.status = 'h'
+        timers.snap1.status = 'p';
+        machine ('snap5');
     }
   },
   offset: 'bottom-in-view'
 })
-*/
+
 
 
 
