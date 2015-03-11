@@ -105,7 +105,7 @@ p {
     padding-top: 2.2%;
     font-family: 'roboto', sans-serif;
     font-weight: 100;
-    font-size: 3.5em;
+    font-size: 2.7em;
     color: #fff;
     position: absolute;
     font-style:italic;
@@ -128,8 +128,8 @@ p {
     text-align:center;
     font-family: 'roboto', sans-serif;
     font-weight: 800;
-    font-size: 6em;
-    padding-top: 38px;
+    font-size: 4.5em;
+    padding-top: 0.3em;
     margin-bottom: 1vh;
     color: #fff;
     display: inline-block;
@@ -139,7 +139,7 @@ p {
 #arrow{
     margin-left:43%;
     cursor: pointer;
-    width: 7em;
+    width: 6em;
 }
 
 .nav {
@@ -162,8 +162,8 @@ p {
     text-align: center;
   padding-top: -20px;
   color: #fff;
-font-size: 2.5em;
-line-height: 2.5em;
+font-size: 2em;
+line-height: 3em;
 }
 .purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
@@ -191,7 +191,7 @@ line-height: 2.5em;
     width: 70px;
     height: auto;
     margin-left: 47%;
-    margin-top: 60%;
+    margin-top: 52%;
 }
 
 .button {
@@ -289,7 +289,6 @@ line-height: 2.5em;
     font-size: 1.5em;
     text-align: justify;
     margin-bottom: 3em;
-    padding-top: 9em;
 }
 
 

@@ -5,7 +5,8 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
-        index: 1
+        index: 1,
+        play: 'inactive'
     },
 
     snap2: {
@@ -14,7 +15,8 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
-        index: 2
+        index: 2,
+        play: 'inactive'
     },
     snap3: {
         current: 1,
@@ -22,7 +24,8 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
-        index: 3
+        index: 3,
+        play: 'inactive'
     },
     snap4: {
         current: 1,
@@ -30,7 +33,8 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
-        index: 4
+        index: 4,
+        play: 'inactive'
     },
     snap5: {
         current: 1,
@@ -38,7 +42,17 @@ var timers = {
         max:4,
         status: 'h',
         time:5,
-        index: 5
+        index: 5,
+        play: 'inactive'
+    },
+    snap6: {
+        current: 1,
+        timer: null,
+        max:4,
+        status: 'h',
+        time:5,
+        index: 5,
+        play: 'inactive'
     }
 };
 
@@ -47,9 +61,10 @@ $('.button').on('click',function(){
     var type = $(this).attr('data-button');
 
     if (type=='play') {
-        if (timers[phone].status=='h'){
+        if (timers[phone].play== 'inactive'){
             timers[phone].status='p';
             machine(phone);
+            timers[phone].play= 'active'
         } 
         else {
         timers[phone].status='p';
@@ -57,12 +72,13 @@ $('.button').on('click',function(){
     else if (type=='pause'){
         timers[phone].status='h';
     } else if (type=='reset'){
-
-        clearInterval(timers[phone].timer);
         timers[phone].current=1;
+        $('#'+phone+' .stuff').removeClass('fade');
+        clearInterval(timers[phone].timer);
         timers[phone].status='p';
-        $('#'+[phone]+' .snap').attr('src', 'img/'+phone+'/'+1+'.png');
         machine(phone);
+        $('#'+[phone]+' .snap').attr('src', 'img/'+phone+'/'+1+'.png');
+        
     }
 
 });
@@ -157,13 +173,25 @@ var pw1 = new Waypoint({
   handler: function(direction) {
     console.log('s-intro ' + direction);
     if (direction == 'up'){
-        timers.snap1.status = 'p';
-        machine ('snap1');
+        if (timers[phone].play== 'inactive'){
+            timers[phone].status='p';
+            machine(phone);
+            timers[phone].play= 'active'
+        } 
+        else {
+        timers[phone].status='p';
+        }}
 
     }
     if (direction == 'down'){
-        timers.snap1.status = 'p';
-        machine ('snap1');
+        if (timers[phone].play== 'inactive'){
+            timers[phone].status='p';
+            machine(phone);
+            timers[phone].play= 'active'
+        } 
+        else {
+        timers[phone].status='p';
+        }}
     }
   },
   offset: 'bottom-in-view'
