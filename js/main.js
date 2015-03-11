@@ -1,9 +1,3 @@
-loc1 = $('#snap1').offset().top;
-loc2 = $('#snap2').offset().top;
-loc3 = $('#snap3').offset().top;
-loc4 = $('#snap4').offset().top;
-loc5 = $('#snap5').offset().top;
-
 var timers = {
     snap1: {
         current: 0,
@@ -38,30 +32,6 @@ var timers = {
         status: 'h',
     }
 }
-phn = "snap1"
-
-//waypoints
-// html
-        //<div id="zero" class="iphone" data-which-phone="zero"></div>
-
-
-        // on scroll past phonefunction(){
-            //var which = $(this.element).attr('data-which-phone');
-            //var timer = setInterval(secondPassed(which))
-            //timers[which].timer = timer;
-        //})
-
-        // on pause
-            //var which = $(this.element).attr('data-which-phone');
-            //clearInterval(timers[which].timer);
-/*
-var datedata = jQuery.grep(bigdata, function(obj) {
-                return obj.thedate === strDateTime;
-                });
-
-                */
-
-
 
 //machine starts here 
 function machine(phn){
@@ -93,6 +63,61 @@ function machine(phn){
     var countdownTimer = setInterval(secondPassed([phn]), 1000);
 }
 
+// check page location
+
+$(window).scroll(function() { 
+    var buffer = 200;
+
+    var loc1 = $('#snap1').offset().top - buffer;
+    var loc2 = $('#snap2').offset().top - buffer;
+    var loc3 = $('#snap3').offset().top - buffer;
+    var loc4 = $('#snap4').offset().top - buffer;
+    var loc5 = $('#snap5').offset().top - buffer;
+
+    var page = $(window).scrollTop();  
+
+    if (page>loc1 && page<loc2){
+    machine ('snap1');
+    console.log('on snap 1');
+    }
+
+    if (page>loc2 && page<loc3){
+    machine ('snap2');
+    console.log('on snap 2');
+    }
+
+    if (page>loc3 && page<loc4){
+    machine ('snap3');
+    console.log('on snap 3');
+    }
+
+});
+
+//waypoints
+// html
+        //<div id="zero" class="iphone" data-which-phone="zero"></div>
+
+
+        // on scroll past phonefunction(){
+            //var which = $(this.element).attr('data-which-phone');
+            //var timer = setInterval(secondPassed(which))
+            //timers[which].timer = timer;
+        //})
+
+        // on pause
+            //var which = $(this.element).attr('data-which-phone');
+            //clearInterval(timers[which].timer);
+/*
+var datedata = jQuery.grep(bigdata, function(obj) {
+                return obj.thedate === strDateTime;
+                });
+
+                */
+
+
+
+
+/*
 var pw1 = new Waypoint({
   element: document.getElementById("snap1"),
   handler: function(direction) {
@@ -161,7 +186,7 @@ var pw5 = new Waypoint({
   },
   offset: 'bottom-in-view'
 })
-
+*/
 
 
 
@@ -181,7 +206,7 @@ $(document).ready(function() {
         }  
         };  
       
-    $(window).scroll(function() {  
+    $(window).scroll(function() { 
     stickyNav();  
     });  
 });
