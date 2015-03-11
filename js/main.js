@@ -1,3 +1,9 @@
+loc1 = $('#snap1').offset().top;
+loc2 = $('#snap2').offset().top;
+loc3 = $('#snap3').offset().top;
+loc4 = $('#snap4').offset().top;
+loc5 = $('#snap5').offset().top;
+
 var timers = {
     snap1: {
         current: 0,
@@ -23,18 +29,38 @@ var timers = {
         current: 0,
         timer: 5,
         max:5,
-        status: 'h'
+        status: 'h',
     },
     snap5: {
         current: 0,
         timer: 5,
         max:5,
-        status: 'h'
+        status: 'h',
     }
 }
 phn = "snap1"
 
 //waypoints
+// html
+        //<div id="zero" class="iphone" data-which-phone="zero"></div>
+
+
+        // on scroll past phonefunction(){
+            //var which = $(this.element).attr('data-which-phone');
+            //var timer = setInterval(secondPassed(which))
+            //timers[which].timer = timer;
+        //})
+
+        // on pause
+            //var which = $(this.element).attr('data-which-phone');
+            //clearInterval(timers[which].timer);
+/*
+var datedata = jQuery.grep(bigdata, function(obj) {
+                return obj.thedate === strDateTime;
+                });
+
+                */
+
 
 
 //machine starts here 
@@ -63,7 +89,7 @@ function machine(phn){
                 console.log(seconds)
             }
         }
-
+    if (timers[phn].status == 'p')
     var countdownTimer = setInterval(secondPassed([phn]), 1000);
 }
 
@@ -75,7 +101,7 @@ var pw1 = new Waypoint({
         timers.snap1.status = 'p';
     }
     if (direction == 'down'){
-        timers.snap1.status = 'h';
+        timers.snap1.status = 'p';
     }
   },
   offset: 'bottom-in-view'
@@ -136,19 +162,7 @@ var pw5 = new Waypoint({
   offset: 'bottom-in-view'
 })
 
-// html
-        //<div id="zero" class="iphone" data-which-phone="zero"></div>
 
-
-        // on scroll past phonefunction(){
-            //var which = $(this.element).attr('data-which-phone');
-            //var timer = setInterval(secondPassed(which))
-            //timers[which].timer = timer;
-        //})
-
-        // on pause
-            //var which = $(this.element).attr('data-which-phone');
-            //clearInterval(timers[which].timer);
 
 
 //make scroll sticky
