@@ -113,6 +113,7 @@ function machine(phn){
                 } else {
                     clearInterval(timers[phn].timer);
                     $('#'+phn+' .stuff').addClass('fade');
+                    $('.s-'+phn+'.play').removeClass('active-button');
                 }
 
             } else if (timers[phn].status == 'p') {
