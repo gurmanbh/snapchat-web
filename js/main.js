@@ -36,48 +36,27 @@ var timers = {
         type: {1:  {ext: 'png',
                         time: 5},
                 2: {ext: 'png',
-                        time: 7},
+                        time: 8},
                 3: {ext: 'png',
-                        time: 4},
+                        time: 6},
                 4: {ext: 'png',
-                        time: 5},
+                        time: 4},
 
        }
     },
     snap3: {
         current: 1,
         timer: null,
-        max:4,
+        max:3,
         status: 'h',
         time:5,
         index: 3,
         play: 'inactive',
         type: {1:  {ext: 'png',
-                        time: 2},
-                2: {ext: 'png',
-                        time: 3},
-                3: {ext: 'png',
-                        time: 1},
-                4: {ext: 'png',
-                        time: 5},
-
-        }
-    },
-    snap4: {
-        current: 1,
-        timer: null,
-        max:4,
-        status: 'h',
-        time:5,
-        index: 4,
-        play: 'inactive',
-        type: {1:  {ext: 'png',
-                        time: 2},
-                2: {ext: 'png',
-                        time: 3},
-                3: {ext: 'png',
-                        time: 1},
-                4: {ext: 'png',
+                        time: 4},
+                2: {ext: 'gif',
+                        time: 3,
+                3: {ext: 'gif',
                         time: 5},
 
         }
@@ -349,4 +328,59 @@ $('#arrow').on('click', function(){
     $('html, body').animate({scrollTop:(pos.top)}, 400);
 });
 
+//let's chart!
+
+/*
+
+var chartdata = {
+    june2014{
+        year: 'June 2014'
+        number: '700'
+        stories: '1 billion stories/day'
+
+    }
+}
+
+var template = '<div class="year"><div class="name"></div><div class="bar"></div></div></div>';
+
+        // for (var i = 0; i < ebolaData.length; i++){
+        //  console.log(i);
+        //  console.log(ebolaData[i]);
+        // }
+
+        // The underscore solution
+        var data_max = _.max(ebolaData, function(ebolaCountry){ return ebolaCountry.cases; }).cases,
+                series = 'cases';
+
+        // A simple solution
+        // var data_max = 0;
+        // ebolaData.forEach(function(countryData){
+        //  if (countryData.cases > data_max){
+        //      data_max = countryData.cases;
+        //  }
+        // });
+        // console.log(data_max) // 14026
+
+
+        ebolaData.forEach(function(ebolaCountry, index){
+            // Step 1: Make our template string a jQuery object
+            var $template = $(template);
+
+            // console.log('Before', template)
+            // console.log('After', $template)
+
+            // Step 2: Start adding our data to our jQuery-ified template
+            $template.find('.name').html(chartdata.name);
+            $template.find('.bar').css({
+                width: (ebolaCountry[series] / data_max)*100 + '%'
+            })
+            $template.find('.number').html(ebolaCountry[series]);
+
+
+            // Step 4/5: Add our country HTML to the canvas
+            $('#canvas').append($template);
+
+        });
+
+*/
         

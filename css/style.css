@@ -323,6 +323,13 @@ line-height: 3em;
     color: white;
 }
 
+#chart{
+    width: 80%;
+    padding-left: 9%;
+    margin-bottom: 10%;
+
+}
+
 .snap{
     position: absolute;
     margin-top: 12.5%;
