@@ -13,8 +13,8 @@ var timers = {
                         time: 2},
                 3: {ext: 'gif',
                         time: 7},
-                4: {ext: 'png',
-                        time: 5},
+                4: {ext: 'gif',
+                        time: 10},
 
         }
     },
