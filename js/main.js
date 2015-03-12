@@ -2,7 +2,7 @@ var timers = {
     snap1: {
         current: 1,
         timer: null,
-        max:4,
+        max:7,
         status: 'h',
         time:5,
         index: 1,
@@ -14,7 +14,13 @@ var timers = {
                 3: {ext: 'gif',
                         time: 7},
                 4: {ext: 'gif',
-                        time: 10},
+                        time: 8},
+                5: {ext: 'png',
+                        time: 3},
+                6: {ext: 'png',
+                        time: 3},
+                7: {ext: 'png',
+                        time: 3},
 
         }
     },
