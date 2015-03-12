@@ -6,7 +6,17 @@ var timers = {
         status: 'h',
         time:5,
         index: 1,
-        play: 'inactive'
+        play: 'inactive',
+        type: {1:  {ext: 'png',
+                        time: 2},
+                2: {ext: 'png',
+                        time: 3},
+                3: {ext: 'png',
+                        time: 1},
+                4: {ext: 'png',
+                        time: 5},
+
+        }
     },
 
     snap2: {
@@ -16,7 +26,17 @@ var timers = {
         status: 'h',
         time:5,
         index: 2,
-        play: 'inactive'
+        play: 'inactive',
+        type: {1:  {ext: 'png',
+                        time: 2},
+                2: {ext: 'png',
+                        time: 3},
+                3: {ext: 'png',
+                        time: 1},
+                4: {ext: 'png',
+                        time: 5},
+
+       }
     },
     snap3: {
         current: 1,
@@ -25,7 +45,17 @@ var timers = {
         status: 'h',
         time:5,
         index: 3,
-        play: 'inactive'
+        play: 'inactive',
+        type: {1:  {ext: 'png',
+                        time: 2},
+                2: {ext: 'png',
+                        time: 3},
+                3: {ext: 'png',
+                        time: 1},
+                4: {ext: 'png',
+                        time: 5},
+
+        }
     },
     snap4: {
         current: 1,
@@ -34,7 +64,17 @@ var timers = {
         status: 'h',
         time:5,
         index: 4,
-        play: 'inactive'
+        play: 'inactive',
+        type: {1:  {ext: 'png',
+                        time: 2},
+                2: {ext: 'png',
+                        time: 3},
+                3: {ext: 'png',
+                        time: 1},
+                4: {ext: 'png',
+                        time: 5},
+
+        }
     },
     snap5: {
         current: 1,
@@ -43,7 +83,17 @@ var timers = {
         status: 'h',
         time:5,
         index: 5,
-        play: 'inactive'
+        play: 'inactive',
+        type: {1:  {ext: 'png',
+                        time: 2},
+                2: {ext: 'png',
+                        time: 3},
+                3: {ext: 'png',
+                        time: 1},
+                4: {ext: 'png',
+                        time: 5},
+
+        }
     },
     snap6: {
         current: 1,
@@ -52,8 +102,18 @@ var timers = {
         status: 'h',
         time:5,
         index: 5,
-        play: 'inactive'
+        play: 'inactive',
+        type: {1:  {ext: 'png',
+                        time: 2},
+                2: {ext: 'png',
+                        time: 3},
+                3: {ext: 'png',
+                        time: 1},
+                4: {ext: 'png',
+                        time: 5},
+
     }
+}
 };
 
 $('.button').on('click',function(){
@@ -89,26 +149,21 @@ $('.button').on('click',function(){
 
 });
 
-function pause (phn){
-
-    }
-
 //machine starts here 
 function machine(phn){
-    var startsec = timers[phn].time;
-    var seconds = startsec;
     var snaps = timers[phn].current;
+    var startsec = timers[phn].type[snaps].time;
+    var seconds = startsec;
     var lastsnap = timers[phn].max;
-
-    console.log(startsec + " " + seconds + " " + snaps + " " + lastsnap);
     timers[phn].timer = setInterval(secondPassed, 1000);
     function secondPassed() {
-        
+        var ext = timers[phn].type[snaps].ext;
+        var time = timers[phn].type[snaps].time;
         if (seconds < 0) {
             if (snaps < lastsnap){
-                seconds = startsec;
                 snaps ++;
-                $('#'+[phn]+' .snap').attr('src', 'img/'+phn+'/'+snaps+'.png');
+                seconds = time;
+                $('#'+[phn]+' .snap').attr('src', 'img/'+phn+'/'+snaps+'.'+ext);
                 $('#'+[phn]+" .timer-no").html(seconds);
                 } else {
                     clearInterval(timers[phn].timer);
@@ -117,7 +172,6 @@ function machine(phn){
                 }
 
             } else if (timers[phn].status == 'p') {
-                
                 $('#'+[phn]+" .timer-no").html(seconds);
                 seconds--;
             }
