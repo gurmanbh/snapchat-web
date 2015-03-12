@@ -10,9 +10,9 @@ var timers = {
         type: {1:  {ext: 'png',
                         time: 2},
                 2: {ext: 'png',
-                        time: 3},
-                3: {ext: 'png',
-                        time: 1},
+                        time: 2},
+                3: {ext: 'gif',
+                        time: 7},
                 4: {ext: 'png',
                         time: 5},
 
@@ -157,10 +157,12 @@ function machine(phn){
     var lastsnap = timers[phn].max;
     timers[phn].timer = setInterval(secondPassed, 1000);
     function secondPassed() {
-        var ext = timers[phn].type[snaps].ext;
-        var time = timers[phn].type[snaps].time;
+        
         if (seconds < 0) {
             if (snaps < lastsnap){
+                var ext = timers[phn].type[snaps+1].ext;
+                var time = timers[phn].type[snaps+1].time;
+                console.log(snaps);
                 snaps ++;
                 seconds = time;
                 $('#'+[phn]+' .snap').attr('src', 'img/'+phn+'/'+snaps+'.'+ext);
@@ -364,7 +366,6 @@ var stickyNav = function(){
         stickyNav();  
     });  
 });    
-
 */
 
 //scroll to partcular section on the page
