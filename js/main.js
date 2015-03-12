@@ -14,7 +14,7 @@ var timers = {
                 3: {ext: 'gif',
                         time: 7},
                 4: {ext: 'gif',
-                        time: 8},
+                        time: 7},
                 5: {ext: 'png',
                         time: 3},
                 6: {ext: 'png',
