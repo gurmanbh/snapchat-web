@@ -4,6 +4,11 @@
           box-sizing: border-box;
 } 
 
+.emoji{
+    margin-top:0;
+    position: absolute;
+}
+
 .active-button{
     background-position: 0px 60px !important;
 }
@@ -183,10 +188,10 @@ p {
 }
 
 #arrow{
-    margin-left:43%;
+    margin-left:42.5%;
     cursor: pointer;
     width: 6em;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .nav {
@@ -329,11 +334,12 @@ line-height: 3em;
 #content p{
     margin-left: 7%;
     font-family: "roboto", Arial, sans-serif;
-    line-height: 180%;
+    line-height: 162%;
     margin-right: 7%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: justify;
     margin-bottom: 3em;
+    margin-top: 0.5em;
 }
 
 
