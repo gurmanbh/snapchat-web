@@ -332,10 +332,11 @@ line-height: 3em;
 }
 
 #content p{
-    margin-left: 7%;
+    margin-left: 8%;
     font-family: "roboto", Arial, sans-serif;
+    font-weight: 300;
     line-height: 162%;
-    margin-right: 7%;
+    margin-right: 8%;
     font-size: 1.2em;
     text-align: justify;
     margin-bottom: 3em;

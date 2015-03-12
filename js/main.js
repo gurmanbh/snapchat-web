@@ -82,44 +82,6 @@ var timers = {
 
         }
     },
-    snap5: {
-        current: 1,
-        timer: null,
-        max:4,
-        status: 'h',
-        time:5,
-        index: 5,
-        play: 'inactive',
-        type: {1:  {ext: 'png',
-                        time: 2},
-                2: {ext: 'png',
-                        time: 3},
-                3: {ext: 'png',
-                        time: 1},
-                4: {ext: 'png',
-                        time: 5},
-
-        }
-    },
-    snap6: {
-        current: 1,
-        timer: null,
-        max:4,
-        status: 'h',
-        time:5,
-        index: 5,
-        play: 'inactive',
-        type: {1:  {ext: 'png',
-                        time: 2},
-                2: {ext: 'png',
-                        time: 3},
-                3: {ext: 'png',
-                        time: 1},
-                4: {ext: 'png',
-                        time: 5},
-
-    }
-}
 };
 
 $('.button').on('click',function(){
