@@ -55,13 +55,13 @@ var timers = {
         type: {1:  {ext: 'png',
                         time: 4},
                 2: {ext: 'gif',
-                        time: 3,
+                        time: 3},
                 3: {ext: 'gif',
                         time: 5},
 
-        }
-    },
-};
+
+    }
+}};
 
 $('.button').on('click',function(){
     var phone = $(this).attr('data-build');
