@@ -10,49 +10,49 @@
 }
 
 .active-button{
-    background-position: 0px 60px !important;
+    background-position: 0px 40px !important;
 }
 
 .play{
     background: url(../img/buttons/play.png);
     background-position: 0px 0px;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .play:hover{
     background: url(../img/buttons/play.png);
-    background-position: 0px -60px;
-    width: 60px;
-    height: 60px;
+    background-position: 0px -40px;
+    width: 40px;
+    height: 40px;
 }
 
 .pause  {
     background: url(../img/buttons/pause.png);
     background-position: 0px 0px;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .pause:hover{
     background: url(../img/buttons/pause.png);
-    background-position: 0px -60px;
-    width: 60px;
-    height: 60px;
+    background-position: 0px -40px;
+    width: 40px;
+    height: 40px;
 }
 
 .reset{
     background: url(../img/buttons/reset.png);
     background-position: 0px 0px;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .reset:hover{
     background: url(../img/buttons/reset.png);
-    background-position: 0px -60px;
-    width: 60px;
-    height: 60px;
+    background-position: 0px -40px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -202,11 +202,13 @@ p {
 .purplehead{
     background-color: #9B55A0;
     width: 90%;
-    height: 7em;
+    height: auto;
     border-radius: 10px;
     margin-top: 20px;
     opacity: 0.7;
     margin-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 .purplehead h1{
     font-family:  "roboto", Arial, sans-serif;
@@ -215,7 +217,6 @@ p {
   padding-top: -20px;
   color: #fff;
 font-size: 2em;
-line-height: 3em;
 }
 .purplehead h2{
     font-family:  "roboto", Arial, sans-serif;
@@ -242,8 +243,8 @@ line-height: 3em;
     position: absolute;
     width: 70px;
     height: auto;
-    margin-left: 47%;
-    margin-top: 52%;
+    margin-left: 350px;
+    margin-top: 470px;
 }
 
 .button {
@@ -300,7 +301,7 @@ line-height: 3em;
     margin-bottom: 20px;
 }
 .ph{
-    width: 40%;
+    width: 315px;
     height: auto;
     position: absolute;
 }
@@ -332,10 +333,10 @@ line-height: 3em;
 
 .snap{
     position: absolute;
-    margin-top: 12.5%;
-    width: 35.8%;
+    margin-top: 97px;
+    width: 283px;
     height: auto;
-    margin-left: 2.5%
+    margin-left: 20px;
 }
 
 #content p{
