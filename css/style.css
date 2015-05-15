@@ -385,6 +385,7 @@ font-size: 2em;
 
      #arrow {
     margin-top: 5%;
+       margin-left:38%;
     }
 
     #ytitle {
@@ -415,15 +416,35 @@ font-size: 2em;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
+        padding-left: 0.4em;
+        padding-right: 0.4em;
     }
 
+     .purplehead h1{
+        font-size: 1.6em;
+    }
 
     .inter {
         position: relative;
-        margin-top: 50px;
+        margin-top: 2em;
         margin-left: 0;
         margin-right: 0;
         width:70%;
+        margin-bottom: 7em;
+    }
+
+    .button{
+        display: inline-block;
+    }
+
+    .button-box{
+        width: 150%;
+        height: auto;
+        position: static;
+        margin-left: 0;
+        padding-top: 43em;
+        margin-right: 0;
+        margin-top: 0;
     }
 
 }
