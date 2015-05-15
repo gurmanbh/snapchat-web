@@ -55,7 +55,6 @@
     height: 40px;
 }
 
-
 body { 
     margin:0; 
 } 
@@ -67,6 +66,7 @@ h1 {
     color: #000;
     margin-top: -10px;
 }
+
 p {
     font-family: 'roboto', sans-serif; 
     font-weight: 100;
@@ -107,10 +107,9 @@ p {
     color: #000;
     display: inline-block;
     margin-left: 4%;
-  margin-top: 10%;
-  position: absolute;
-  /* margin-right: 20px; */
-
+    margin-top: 10%;
+    position: absolute;
+    /* margin-right: 20px; */
 }
 
 #yimg{
@@ -118,12 +117,10 @@ p {
     width:35%;
     vertical-align: center;
     margin-left: 59.1%;
-  margin-top: 10%;
-  position: absolute;
-  /* margin-right: 20px; */
-
-
+    margin-top: 10%;
+    position: absolute;
 }
+
 #image {
     margin-left: 40%;    
 }
@@ -137,6 +134,7 @@ p {
 .container{
     display: inline-block;
 }
+
 .bottom{
     font-family: 'roboto', sans-serif;
     font-weight: 500;
@@ -151,6 +149,7 @@ p {
     display: inline-block;
     vertical-align: top;
 }
+
 .inner{  
     width:50%; 
     text-align:left;
@@ -355,15 +354,18 @@ font-size: 2em;
 
 
 @media (max-width: 800px){
+    
     .outer{
-     width: 100%;
-    height: 35vh;
+         width: 100%;
+        height: 35vh;
     }
+
     .outerblue {
         width: 100%;
         margin-left: 0px;
         height: 28vh;
     }
+
     .inner {
         font-size: 2.5em;
         text-align:center;
