@@ -422,8 +422,8 @@ font-size: 2em;
         position: relative;
         margin-top: 50px;
         margin-left: 0;
-        margin-right: auto;
-        width:80%;
+        margin-right: 0;
+        width:70%;
     }
 
 }
