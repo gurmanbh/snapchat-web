@@ -1,7 +1,0 @@
-Colors
-Yellow: #efe200
-Red/Pink: #ea4754
-Blue: #44b2e2
-
-yellow height: 65%
-pink width: 60%
